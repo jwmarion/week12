@@ -2,8 +2,19 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  box-sizing: border-box;
 }
-
+.game{
+  margin-left: 27.5vw;
+}
+.top{
+  display: block;
+  margin:  auto;
+  width: 55%;
+}
+.retry{
+  margin-left: 18.5vw;
+}
 .box{
   width: 15vw;
   height: 15vw;
@@ -13,7 +24,7 @@ body {
   text-align: center;
 }
 
-.grid div:nth-of-type(3n +4){
+.grid div:nth-of-type(3n+4){
   clear: both;
 }
 
