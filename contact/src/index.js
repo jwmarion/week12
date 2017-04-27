@@ -15,12 +15,16 @@ class Contact extends React.Component{
       type: '',
       favorite: -1,
       contacts: [
-        {name: 'james',phone: '3036066666', email: 'jwmarion@yahoo.org', type: 'Sandwich Artist', favorite: 1}]
+        {name: 'james',
+        phone: '3036066666',
+        email: 'jwmarion@yahoo.org',
+        type: 'Sandwich Artist',
+        favorite: 1}]
     });
   }
 
   render(){
-    var fav = ":D"
+    var fav = "      :D"
     var entry =
       <div>
        <div className='input'>
@@ -57,7 +61,7 @@ class Contact extends React.Component{
       {this.state.entry === 1?entry:null}
       {this.state.contacts.map((object,idx)=>
         <div key={idx} className="user">
-          <h2>{object.name} {object.type}    {object.favorite === 1?fav:'hi'}</h2>
+          <h2>{object.name}{object.type}{object.favorite === 1?fav:null}</h2>
           <h3>{object.phone}</h3>
           <h3>{object.email}</h3>
           <button onClick={event=>this.change('delete',idx)}>Delete</button>
