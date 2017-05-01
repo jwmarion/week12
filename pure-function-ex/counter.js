@@ -1,16 +1,19 @@
 const pureCli = require('./pure-cli');
 
 function reducer(state, input) {
-  if (input === 'q'){
-    process.exit();
+  if(state === null){
+    return 0;
+  }
+  else if (input === 'q'){
+    return 'end';
   }
   else if (input === '+'){
-    return input-1
+    return state+1;
   }
   else if (input === '-'){
-    return input-1;
+    return state-1;
   }
-  else if (!isNaN(parseFloat(state))){
+  else if (!isNaN(input)){
     return input * input;
   }
 }

@@ -1,16 +1,7 @@
 const pureCli = require('./pure-cli');
 
 function reducer(state, input) {
-  if (input === null || state === null){
-    return {number: Math.floor(Math.random() * 10), guess: null, action: null};
-      // return {number: 5, guess: null, action: null};
-  }
-  else if (parseInt(input) != state.number){
-    return {number: state.number, guess: parseInt(input), action: state.action }
-  }
-  else if (parseInt(input) === state.number){
-    return {number: state.number, guess: parseInt(input), action: 'end' }
-  }
+  // put your code here
 }
 
 module.exports = reducer;
